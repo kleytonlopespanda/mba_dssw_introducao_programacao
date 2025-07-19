@@ -10,17 +10,17 @@ imc = peso / (altura ** 2)
 # Classificação
 if imc < 18.5:
     classificacao = "Abaixo do peso"
-if 18.5 <= imc < 25:
+elif 18.5 <= imc < 25:
     classificacao = "Peso normal"
-if 25 <= imc < 30:
+elif 25 <= imc < 30:
     classificacao = "Sobrepeso"
-if 30 <= imc < 35:
+elif 30 <= imc < 35:
     classificacao = "Obesidade Grau I"
-if 35 <= imc < 40:
+elif 35 <= imc < 40:
     classificacao = "Obesidade Grau II"
-else:
+elif 40 <= imc:
     classificacao = "Obesidade Grau III"
 
 # Resultado
-print(f" Seu IMC é {imc:.2f}")
+print(f"\nSeu IMC é {imc:.2f}")
 print(f"Classificação: {classificacao}")
