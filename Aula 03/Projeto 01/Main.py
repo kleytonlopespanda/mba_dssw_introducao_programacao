@@ -1,3 +1,9 @@
+def listar_sh(lista):
+
+    tam_sh = len(lista)
+    for i in range(tam_sh):
+        print(f'[{i}] - {lista[i][0]} - {lista[i][1]}')
+
 lista_sh = [['Batman', 'inteligencia'],['Super-Homem', 'força'], ['Flash', 'Velocidade'], ['Mulher Maravilha', 'força']]
 
 while True:
@@ -18,25 +24,25 @@ while True:
         lista_sh.append([nome, skill])
 
     elif op == 2:
-       print("Alterou um Super Hero")
+       print("### ALTERAR UM SUPER HERO ###")
+       listar_sh(lista_sh)
+
+       op_alt = int(input('Digite o herói a ser alterado: '))
+       nome = input('Digite o novo nome do super hero:')
+       skill = input('Digite a nova skill do super hero:')
+       lista_sh[op_alt] = [nome, skill]
+
 
     elif op == 3:
         print("### DELETAR UM SUPER HERO ###")
 
-        tam_sh = len(lista_sh)
-        for i in range(tam_sh):
-            print(f'[{i}] - {lista_sh[i][0]} - {lista_sh[i][1]}')
-
+        listar_sh(lista_sh)
         op_del = int(input('Digite o herói a ser deletado: '))
-
         del lista_sh[op_del]
 
     elif op == 4:
         print('### LISTA DE SUPER HEROS ###')
-
-        tam_sh = len(lista_sh)
-        for i in range(tam_sh):
-            print(f'[{i}] - {lista_sh[i][0]} - {lista_sh[i][1]}')
+        listar_sh(lista_sh)
 
     elif op == 0:
         print ("Saindo do sistema")
