@@ -1,3 +1,13 @@
+def cadastrar_sh(num_sh):
+
+    for i in range(num_sh):
+        nome = input('Digite o nome do super hero:')
+        skill = input('Digite a skill do super hero:')
+        lista_sh.append([nome, skill])
+        print(f'O SH {nome} foi cadastrado com sucesso!')
+
+
+
 def listar_sh(lista):
 
     tam_sh = len(lista)
@@ -18,10 +28,12 @@ while True:
     op = int(input('Digite a opção desejada: '))
 
     if op == 1:
-        print('### CADASTRO DE SUPER HERO ###')
-        nome = input('Digite o nome do super hero:')
-        skill = input('Digite a skill do super hero:')
-        lista_sh.append([nome, skill])
+       print('### CADASTRO DE SUPER HERO ###')
+       n_sh = int(input( 'Deseja cadastrar quantos SH?'))
+       if 0 < n_sh < 11:
+           cadastrar_sh(n_sh)
+       else:
+           print('Esse número de SH é invalido!')
 
     elif op == 2:
        print("### ALTERAR UM SUPER HERO ###")
